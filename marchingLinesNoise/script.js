@@ -5,14 +5,14 @@ function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
     background(0)
     angleMode(DEGREES)
-    noiseDetail(2)
+    noiseDetail(1)
     lines = setupLines(DENSITY)
     
 }
 
 function draw() {
+    //background(0)
     noStroke()
-    fill(255)
 
     lines.forEach(line => line.render())
 }
@@ -32,13 +32,12 @@ function setupLines(density) {
     return lines
 }
 
+// Represents a line
 class Line {
     constructor(x, y) {
         this.curveSpeed = 0.001
         this.points = []
-        this.startX = x
-        this.startY = y
-        this.initialVector = createVector(x + random(-1, 1), y + random(-1, 1))
+        this.initialVector = createVector(x + random(-10, 10), y + random(-10, 10))
         this.currentVector = this.initialVector.copy()
     }
 
@@ -52,12 +51,41 @@ class Line {
         // Get a point using the current x, y of the vector
         const point = {x: this.currentVector.x, y: this.currentVector.y}
         this.points.push(point)
+        console.log(point)
 
         return point
     }
 
     render() {
         const point = this.nextPoint()
-        ellipse(point.x, point.y, 1)
+        ellipse(point.x, point.y, 2)
+
+        // this.renderTrail()
     }
+
+    // renderTrail() {
+
+    //     for (let t = 0; t < this.points.length; t += 10) {
+    //         let trail = this.points[t]
+    //         ellipse(trail.x, trail.y, t/10)
+    //     }
+
+    //     if (this.points.length > 100) {
+    //         this.points.splice(0, 1)
+    //     }
+
+    //     // if(this.points.length < 2) return
+    //     // stroke(255)
+    //     // strokeWeight(1)
+    //     // fill(255)
+    //     // const numberOfLines = 5
+    //     // const step = Math.ceil(this.points.length / numberOfLines)
+
+    //     // for (let i = 1; i < this.points.length; i += step) {
+    //     //     const previousPoint = this.points[i - 1]
+    //     //     const point = this.points[i]
+    //     //     line(previousPoint.x, previousPoint.y, point.x, point.y)
+    //     // }
+    // }
+
 }
