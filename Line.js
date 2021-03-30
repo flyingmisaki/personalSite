@@ -1,14 +1,18 @@
-const LINE_BRIGHTNESS = 150
-const LINE_THICKNESS = 5
+const LINE_BRIGHTNESS = 100
+const LINE_THICKNESS = 3
+
+const LOCATION_OFFSET = 100
+const CURVE_SPEED = 0.001
+
 const TRAIL_SEGMENTS = 10
 const TRAIL_LENGTH = 200
 
 // Represents a line
 class Line {
     constructor(x, y) {
-        this.curveSpeed = 0.001
+        this.curveSpeed = CURVE_SPEED
         this.points = []
-        this.initialVector = createVector(x + random(-10, 10), y + random(-10, 10))
+        this.initialVector = createVector(x + random(-LOCATION_OFFSET, LOCATION_OFFSET), y + random(-LOCATION_OFFSET, LOCATION_OFFSET))
         this.currentVector = this.initialVector.copy()
     }
 
@@ -35,9 +39,9 @@ class Line {
     }
 
     renderTrail() {
-        if(this.points.length < 2) return
+        if (this.points.length < 2) return
 
-        if(this.points.length > TRAIL_LENGTH) this.points.splice(0, 1)
+        if (this.points.length > TRAIL_LENGTH) this.points.splice(0, 1)
         
         const numberOfPoints = TRAIL_SEGMENTS
 
@@ -46,7 +50,7 @@ class Line {
         if (numberOfPoints > this.points.length) {
             trailPoints = this.points
         }
-        else{
+        else {
             const step = Math.ceil(this.points.length / numberOfPoints)
 
             for(let i = 0; i < this.points.length; i += step){
@@ -55,13 +59,14 @@ class Line {
 
             trailPoints.push(this.points[this.points.length - 1])
         }
+        
         // Drawing lines between points on the trail
         for (let i = 1; i < trailPoints.length; i++) {
             const lastPoint = trailPoints[i - 1]
             const currentPoint = trailPoints[i]
 
             const weight = LINE_THICKNESS * i / trailPoints.length
-            // const shade = 255 * i / trailPoints.length
+            //const shade = 255 * i / trailPoints.length
 
             strokeWeight(weight)
             //stroke(shade)

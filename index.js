@@ -1,5 +1,5 @@
-const DENSITY = 25
-const NOISE_DETAIL = 1
+const DENSITY = 10
+const NOISE_DETAIL = 2
 const NOISE_SCALE = 1
 
 let lines
@@ -7,16 +7,17 @@ let lines
 // https://www.sliderrevolution.com/resources/css-animated-background/
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight)
-    background(0)
+    canvas = createCanvas(window.innerWidth, window.innerHeight)
+    canvas.position(0, 0)
+    canvas.style('z-index', '-1')
+    background(10)
     angleMode(DEGREES)
     noiseDetail(NOISE_DETAIL, NOISE_SCALE)
     lines = setupLines(DENSITY)
-    
 }
 
 function draw() {
-    background(0)
+    background(10)
     noStroke()
 
     lines.forEach(line => line.render())
