@@ -1,6 +1,6 @@
-const DENSITY = 10
-const NOISE_DETAIL = 2
-const NOISE_SCALE = 1
+const DENSITY = 33
+const NOISE_DETAIL = 3
+const NOISE_SCALE = 0.8
 
 let lines
 
@@ -10,14 +10,14 @@ function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight)
     canvas.position(0, 0)
     canvas.style('z-index', '-1')
-    background(10)
+    background(0)
     angleMode(DEGREES)
     noiseDetail(NOISE_DETAIL, NOISE_SCALE)
     lines = setupLines(DENSITY)
 }
 
 function draw() {
-    background(10)
+    background(0)
     noStroke()
 
     lines.forEach(line => line.render())
