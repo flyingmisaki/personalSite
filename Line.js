@@ -1,4 +1,4 @@
-const LINE_BRIGHTNESS = 100
+const LINE_BRIGHTNESS = 200
 const LINE_THICKNESS = 3
 
 const LOCATION_OFFSET = 100
@@ -11,7 +11,7 @@ const TRAIL_LENGTH = 200
 class Line {
     constructor(x, y) {
         this.curveSpeed = CURVE_SPEED
-        this.points = []
+        this.points = [] 
         this.initialVector = createVector(x + random(-LOCATION_OFFSET, LOCATION_OFFSET), y + random(-LOCATION_OFFSET, LOCATION_OFFSET))
         this.currentVector = this.initialVector.copy()
     }
@@ -36,6 +36,7 @@ class Line {
         //ellipse(point.x, point.y, this.thickness)
 
         this.renderTrail()
+        // console.log(this.currentVector)
     }
 
     renderTrail() {

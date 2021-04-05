@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="https://kit.fontawesome.com/9840d611ae.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
     <script src="index.js"></script>
     <script src="Line.js"></script>
@@ -21,33 +22,61 @@
 <body>
     <canvas></canvas>
     
-    <header class="header">
+    <header id="header">
         <h1>Pierrick Lyons</h1>
         <p>Programmer - CS enthusiast</p>
     </header>
 
     <section id="cards">
+        
         <div class="card" id="about">
-            <img src="testImage.png">
+            <img src="me.jpg" id="mePic">
             <div>
-                <h3>This is a card title</h3>
-                <p>sdoifhndsiujfvbajksgfbaiug</p>
+                <h3>About me</h3>
+                <p>Hi, my name is Pierrick, I'm blah blah blahhh</p>
             </div>
         </div>
-        <div class="card">
+        
+        <div class="card" id="cardlet">
             <img src="testImage.png">
             <div>
-                <h3>This is a card title</h3>
-                <p>sdoifhndsiujfvbajksgfbaiug</p>
+                <h3>My work</h3>
+                <p>General work stuff here</p>
             </div>
         </div>
-        <div class="card">
+
+        <div class="card" id="cardlet">
             <img src="testImage.png">
             <div>
-                <h3>This is a card title</h3>
-                <p>sdoifhndsiujfvbajksgfbaiug</p>
+                <h3>My other works</h3>
+                <p>Other work stufffff</p>
             </div>
         </div>
+
+    </section>
+
+    <section id="footer">
+        
+        <div id="empty"></div>
+        
+        <div class="social" id="email">
+            <a href="mailto:pierrick@live.co.uk" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <div class="social" id="github">
+            <a href="https://github.com/flyingmisaki" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="social" id="twitter">
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="social" id="instagram">
+            <a href="https://www.instagram.com/flyingmisaki/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div id="empty"></div>
+
     </section>
 
 </body>

@@ -13,7 +13,7 @@ canvas {
     position: fixed !important;
  }
 
-header {
+#header {
     background: none;
     font-size: 3rem;
     display: flex;
@@ -33,7 +33,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--white);
+    background: rgba(200, 200, 200, 0.2);
 }
 
 #cards {
@@ -46,12 +46,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-    background-color: #050505d5;
+    background-color: rgba(15, 15, 15, 0.8);
+    transition: background-color 0.35s;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(200, 200, 200, 0.2);
     margin: 1rem;
     flex-grow: 1;
 
     display: flex;
     padding: 2rem;
+}
+
+.card:hover {
+    background-color: rgba(15, 15, 15, 0.95);
+    transition: background-color 0.35s;
 }
 
 .card h3 {
@@ -60,8 +69,54 @@ body::-webkit-scrollbar-thumb {
 
 .card>img {
     margin-right: 2rem;
+    max-width: 20vw;
+    max-height: 40vh;
 }
 
 #about {
     width: 100%;
+}
+
+#cardlet {
+    width: 40%;
+}
+
+#footer {
+    background-color: rgba(15, 15, 15, 0.8);
+    transition: background-color 0.35s;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(200, 200, 200, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+#footer:hover {
+    background-color: rgba(15, 15, 15, 0.95);
+    transition: background-color 0.35s;
+}
+
+.social {
+    font-size: 3rem;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: color 0.35s;
+    color: rgba(255, 255, 255, 1);
+}
+
+.social:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: background-color 0.35s;
+    color: rgba(15, 15, 15, 1);
+    transition: color 0.35s;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
 }

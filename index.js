@@ -2,10 +2,6 @@ const DENSITY = 33
 const NOISE_DETAIL = 3
 const NOISE_SCALE = 0.8
 
-let lines
-
-// https://www.sliderrevolution.com/resources/css-animated-background/
-
 function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight)
     canvas.position(0, 0)
