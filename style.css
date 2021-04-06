@@ -34,7 +34,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: rgba(200, 200, 200, 0.2);
+    background: rgba(92, 92, 92, 0.2);
 }
 
 #cards {
@@ -47,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-    background-color: rgba(15, 15, 15, 0.85);
+    background-color: rgba(12, 12, 12, 0.98);
     transition: background-color 0.35s;
     border-style: solid;
     border-width: 1px;
@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card:hover {
-    background-color: rgba(15, 15, 15, 0.9);
+    background-color: rgba(12, 12, 12, 0.95);
     transition: background-color 0.35s;
 }
 
@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #footer {
-    background-color: rgba(15, 15, 15, 0.85);
+    background-color: rgba(12, 12, 12, 0.98);
     transition: background-color 0.35s;
     border-style: solid;
     border-width: 1px;
@@ -96,7 +96,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #footer:hover {
-    background-color: rgba(15, 15, 15, 0.9);
+    background-color: rgba(12, 12, 12, 0.95);
     transition: background-color 0.35s;
 }
 

@@ -4,7 +4,7 @@ const MIN_NOISE_DETAIL = 1
 const MAX_NOISE_DETAIL = 3
 const NOISE_SCALE = 1
 
-const MIN_DENSITY = 20
+const MIN_DENSITY = 15
 const MAX_DENSITY = 33
 
 const MIN_ANIMATION_LENGTH = 5000
@@ -41,8 +41,8 @@ function resetAnimation() {
 
 function runAnimation() {
     background(BACKGROUND_COLOR)
-
     const timePassed = millis() - startTime
+    // brightness = LINE_BRIGHTNESS * (timePassed / animationLength)
     const brightness = LINE_BRIGHTNESS * (1 - timePassed / animationLength)
     stroke(brightness)
     
