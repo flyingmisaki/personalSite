@@ -1,7 +1,6 @@
-const LINE_BRIGHTNESS = 200
 const LINE_THICKNESS = 3
 
-const LOCATION_OFFSET = 100
+const LOCATION_OFFSET = 100 // +-
 const CURVE_SPEED = 0.001
 
 const TRAIL_SEGMENTS = 10
@@ -32,7 +31,6 @@ class Line {
 
     render() {
         const point = this.nextPoint()
-        stroke(LINE_BRIGHTNESS)
         //ellipse(point.x, point.y, this.thickness)
 
         this.renderTrail()

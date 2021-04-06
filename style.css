@@ -7,11 +7,12 @@
 
 body {
     overflow: overlay;
+    background-color: black;
 }
 
 canvas {
     position: fixed !important;
- }
+}
 
 #header {
     background: none;
@@ -46,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.85);
     transition: background-color 0.35s;
     border-style: solid;
     border-width: 1px;
@@ -59,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card:hover {
-    background-color: rgba(15, 15, 15, 0.95);
+    background-color: rgba(15, 15, 15, 0.9);
     transition: background-color 0.35s;
 }
 
@@ -82,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #footer {
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.85);
     transition: background-color 0.35s;
     border-style: solid;
     border-width: 1px;
@@ -95,16 +96,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 #footer:hover {
-    background-color: rgba(15, 15, 15, 0.95);
+    background-color: rgba(15, 15, 15, 0.9);
     transition: background-color 0.35s;
 }
 
 .social {
-    font-size: 3rem;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0 0.2rem;
     transition: color 0.35s;
     color: rgba(255, 255, 255, 1);
 }
