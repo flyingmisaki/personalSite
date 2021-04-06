@@ -4,7 +4,7 @@ const MIN_NOISE_DETAIL = 1
 const MAX_NOISE_DETAIL = 3
 const NOISE_SCALE = 1
 
-const MIN_DENSITY = 15
+const MIN_DENSITY = 10
 const MAX_DENSITY = 33
 
 const MIN_ANIMATION_LENGTH = 5000
@@ -26,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-    runAnimation()
+    runAnimationTick()
 }
 
 function windowResized() {
@@ -39,11 +39,16 @@ function resetAnimation() {
     animationLength = random(MIN_ANIMATION_LENGTH, MAX_ANIMATION_LENGTH) 
 }
 
-function runAnimation() {
+function runAnimationTick() {
     background(BACKGROUND_COLOR)
     const timePassed = millis() - startTime
-    // brightness = LINE_BRIGHTNESS * (timePassed / animationLength)
-    const brightness = LINE_BRIGHTNESS * (1 - timePassed / animationLength)
+    let brightness
+    if (timePassed < animationLength / 2) {
+        brightness = LINE_BRIGHTNESS * 2 * (timePassed / animationLength)
+    } 
+    else {
+        brightness = LINE_BRIGHTNESS * 2 * (1 - timePassed / animationLength)
+    }
     stroke(brightness)
     
     if (timePassed > animationLength) {
