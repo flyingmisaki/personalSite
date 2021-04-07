@@ -7,8 +7,8 @@ const NOISE_SCALE = 1
 const MIN_DENSITY = 10
 const MAX_DENSITY = 33
 
-const MIN_ANIMATION_LENGTH = 5000
-const MAX_ANIMATION_LENGTH = 10000
+const MIN_ANIMATION_LENGTH = 6000
+const MAX_ANIMATION_LENGTH = 12000
 
 const LINE_BRIGHTNESS = 200
 
@@ -41,6 +41,7 @@ function resetAnimation() {
 
 function runAnimationTick() {
     background(BACKGROUND_COLOR)
+    
     const timePassed = millis() - startTime
     let brightness
     if (timePassed < animationLength / 2) {
@@ -62,7 +63,7 @@ function runAnimationTick() {
 function setupLines(density) {
     const lines = []
 
-    const spacing = window.innerWidth / density
+    const spacing = 100 //window.innerWidth / density
     
     for (let x = 0; x < window.innerWidth; x += spacing) {
         for (let y = 0; y < window.innerHeight; y += spacing) {

@@ -5,24 +5,13 @@
     --black: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow: overlay;
     background-color: black;
-}
-
-canvas {
-    position: fixed !important;
-}
-
-#header {
-    background: none;
-    font-size: 3rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding-top: 5vh;
-    padding-left: 10rem;
-    height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -37,13 +26,80 @@ body::-webkit-scrollbar-thumb {
     background: rgba(92, 92, 92, 0.2);
 }
 
+canvas {
+    position: fixed !important;
+}
+
+#header {
+    background: none;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 90vh;
+    flex-grow: 1;
+}
+
+#buttondiv {
+    background: none;
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding-top: 1rem;
+}
+
+.arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animateArrows 2s infinite;
+}
+
+@keyframes animateArrows {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
 #cards {
     /* background-color: red; */
     display: flex;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: wrap;
-    padding: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
 }
 
 .card {
@@ -71,7 +127,7 @@ body::-webkit-scrollbar-thumb {
 .card>img {
     margin-right: 2rem;
     max-width: 20vw;
-    max-height: 40vh;
+    max-height: 35vh;
 }
 
 #about {
@@ -104,13 +160,13 @@ body::-webkit-scrollbar-thumb {
     font-size: 2rem;
     padding: 1rem;
     margin: 0 0.2rem;
-    transition: color 0.35s;
     color: rgba(255, 255, 255, 1);
+    transition: color 0.35s;
 }
 
 .social:hover {
-    background-color: rgba(255, 255, 255, 0.95);
     transition: background-color 0.35s;
+    background-color: rgba(255, 255, 255, 0.95);
     color: rgba(15, 15, 15, 1);
     transition: color 0.35s;
 }
@@ -118,4 +174,9 @@ body::-webkit-scrollbar-thumb {
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
+}
+
+#signature {
+    display: flex;
+    justify-content: center;
 }
