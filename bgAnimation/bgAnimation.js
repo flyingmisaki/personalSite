@@ -6,11 +6,12 @@ const NOISE_SCALE = 1
 
 const MIN_DENSITY = 10
 const MAX_DENSITY = 33
+const FORCED_SPACING = 75
 
 const MIN_ANIMATION_LENGTH = 6000
-const MAX_ANIMATION_LENGTH = 12000
+const MAX_ANIMATION_LENGTH = 8000
 
-const LINE_BRIGHTNESS = 200
+const LINE_BRIGHTNESS = 100
 
 let animationLength
 let startTime
@@ -62,8 +63,8 @@ function runAnimationTick() {
 
 function setupLines(density) {
     const lines = []
-
-    const spacing = 100 //window.innerWidth / density
+    
+    const spacing = FORCED_SPACING //window.innerWidth / density
     
     for (let x = 0; x < window.innerWidth; x += spacing) {
         for (let y = 0; y < window.innerHeight; y += spacing) {

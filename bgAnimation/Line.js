@@ -4,7 +4,7 @@ const LOCATION_OFFSET = 100 // +-
 const CURVE_SPEED = 0.001
 
 const TRAIL_SEGMENTS = 10
-const TRAIL_LENGTH = 200
+const TRAIL_LENGTH = 500
 
 // Represents a line
 class Line {
