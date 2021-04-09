@@ -11,7 +11,7 @@ const FORCED_SPACING = 75
 const MIN_ANIMATION_LENGTH = 6000
 const MAX_ANIMATION_LENGTH = 8000
 
-const LINE_BRIGHTNESS = 100
+const LINE_BRIGHTNESS = 175
 
 let animationLength
 let startTime
