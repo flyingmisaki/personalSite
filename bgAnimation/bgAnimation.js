@@ -1,8 +1,9 @@
 const BACKGROUND_COLOR = 0
 
 const MIN_NOISE_DETAIL = 1
-const MAX_NOISE_DETAIL = 3
-const NOISE_SCALE = 1
+const MAX_NOISE_DETAIL = 2
+const MIN_NOISE_SCALE = 0.5
+const MAX_NOISE_SCALE = 1.5
 
 const MIN_DENSITY = 10
 const MAX_DENSITY = 33
@@ -37,7 +38,8 @@ function windowResized() {
 function resetAnimation() {
     lines = setupLines(random(MIN_DENSITY, MAX_DENSITY))
     startTime = millis()
-    animationLength = random(MIN_ANIMATION_LENGTH, MAX_ANIMATION_LENGTH) 
+    animationLength = random(MIN_ANIMATION_LENGTH, MAX_ANIMATION_LENGTH)
+    noiseDetail(random(MIN_NOISE_DETAIL, MAX_NOISE_DETAIL), random(MIN_NOISE_SCALE, MAX_NOISE_SCALE))
 }
 
 function runAnimationTick() {
@@ -54,7 +56,6 @@ function runAnimationTick() {
     stroke(brightness)
     
     if (timePassed > animationLength) {
-        noiseDetail(random(MIN_NOISE_DETAIL, MAX_NOISE_DETAIL), NOISE_SCALE)
         resetAnimation()
     }
     
