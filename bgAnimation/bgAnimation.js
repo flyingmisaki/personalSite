@@ -1,7 +1,7 @@
 const BACKGROUND_COLOR = 0
 
 const MIN_NOISE_DETAIL = 1
-const MAX_NOISE_DETAIL = 2
+const MAX_NOISE_DETAIL = 3
 const MIN_NOISE_SCALE = 0.5
 const MAX_NOISE_SCALE = 1.5
 
