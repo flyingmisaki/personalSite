@@ -1,8 +1,8 @@
 const BACKGROUND_COLOR = 0
 
-const MIN_NOISE_DETAIL = 1
-const MAX_NOISE_DETAIL = 3
-const MIN_NOISE_SCALE = 1
+let MIN_NOISE_DETAIL = 1
+let MAX_NOISE_DETAIL = 3
+const MIN_NOISE_SCALE = 0.5
 const MAX_NOISE_SCALE = 1
 
 const MIN_DENSITY = 10
@@ -19,7 +19,7 @@ let startTime
 let lines
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight)
+    canvas = createCanvas(window.innerWidth + 200, window.innerHeight + 200)
     canvas.position(0, 0)
     canvas.style('z-index', '-1')
     angleMode(DEGREES)
