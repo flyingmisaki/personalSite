@@ -16,16 +16,7 @@ const resizeRendererToDisplaySize = (renderer) => {
     if (needResize) renderer.setSize(window.innerWidth, window.innerHeight)
     return needResize
 }
-  
-// mouse stuff
-let mouseX = 0
-let mouseY = 0
 
-document.addEventListener("mousemove", (event) => {
-    mouseX = event.clientX
-    mouseY = event.clientY
-})
-  
 const main = () => {
     // get canvas
     const canvas = document.getElementById("canvas")
@@ -49,7 +40,7 @@ const main = () => {
     const noOfPoints = 2500
     geometry.setAttribute("position", new THREE.BufferAttribute(getRandomParticlePos(noOfPoints), 3))
   
-    const material = new THREE.PointsMaterial({size: 0.05})
+    const material = new THREE.PointsMaterial({size: 0.045})
   
     // per point mesh
     const point = new THREE.Points(geometry, material)
@@ -57,16 +48,28 @@ const main = () => {
     // add point
     scene.add(point)
 
+    // mouse stuff
+    let mouseX = 0
+    let mouseY = 0
+
+    document.addEventListener("mousemove", (event) => {
+        mouseX = event.clientX
+        mouseY = event.clientY
+    })
+
     const render = () => {
-        
         if (resizeRendererToDisplaySize(renderer)) {
             // changing the camera aspect to remove the strechy problem
             camera.aspect = canvas.width / canvas.height
             camera.updateProjectionMatrix()
         }
+
+        // movement
+        point.rotation.x += 0.00007
+        point.rotation.y += 0.000015
     
-        point.rotation.x = mouseY * 0.000075
-        point.rotation.y = mouseX * 0.000075
+        // point.rotation.x = mouseY * 0.000075
+        // point.rotation.y = mouseX * 0.000075
     
         point.position.x = mouseX * 0.00075
         point.position.y = mouseY * -0.00075
