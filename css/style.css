@@ -43,6 +43,8 @@ body::-webkit-scrollbar-thumb {
 
 canvas {
     position: fixed !important;
+    z-index: -2;
+    opacity: 0.5;
 }
 
 #gradient {
