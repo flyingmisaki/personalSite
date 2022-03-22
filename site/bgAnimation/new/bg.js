@@ -21,7 +21,8 @@ const main = () => {
     // get canvas
     const canvas = document.getElementById("canvas")
     // create renderer
-    const renderer = new THREE.WebGLRenderer({ canvas })
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true })
+    renderer.setPixelRatio(window.devicePixelRatio)
     renderer.setClearColor(new THREE.Color("#000000"))
   
     // camera
@@ -65,8 +66,8 @@ const main = () => {
         }
 
         // movement
-        point.rotation.x += 0.00007
-        point.rotation.y += 0.000015
+        point.rotation.x += 0.00025
+        point.rotation.y += 0.0
     
         // point.rotation.x = mouseY * 0.000075
         // point.rotation.y = mouseX * 0.000075
