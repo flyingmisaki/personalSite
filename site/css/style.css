@@ -60,8 +60,8 @@ canvas {
     flex-direction: column;
     box-sizing: border-box;
     padding-top: 15vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
     text-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
     height: 60vh;
     flex-grow: 1;
@@ -94,7 +94,7 @@ canvas {
 }
 
 .arrow span {
-    display: block;
+    display: flex;
     width: 1vw;
     height: 1vw;
     border-bottom: 0.25rem solid white;
@@ -121,11 +121,19 @@ canvas {
 #cards {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: wrap;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
     padding-bottom: 5vw;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    margin: 2rem;
+    margin-top: 4rem;
 }
 
 .card {
@@ -138,11 +146,15 @@ canvas {
 
     display: flex;
     padding: 1vw;
+
+    font-size: 1.3rem;
 }
 
 .card>img {
     margin-right: 2rem;
     max-width: 20vw;
+    max-height: auto;
+    object-fit: contain;
 }
 
 #about {
@@ -161,8 +173,8 @@ canvas {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-right: 6vw;
-    margin-left: 6vw;
+    margin-right: 16vw;
+    margin-left: 16vw;
     margin-top: 25vh;
 }
 
