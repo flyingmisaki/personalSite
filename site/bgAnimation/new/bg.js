@@ -74,11 +74,14 @@ const main = () => {
     
         point.position.x = mouseX * 0.00075
         point.position.y = mouseY * -0.00075
-    
+        
+        // loop
+        setTimeout(function() {
+            requestAnimationFrame(render)
+        }, 1000 / 60)
+
         // render the scene
         renderer.render(scene, camera)
-        // loop
-        requestAnimationFrame(render)
     }
     requestAnimationFrame(render)
 }

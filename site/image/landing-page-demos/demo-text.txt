@@ -1,0 +1,26 @@
+Intro:
+HexRig is a unity project that aims at approximating real life movement and allows physics-based control of a virtual character using a “hexabody” collision model. Allows for a full range of motion in a roomscale environment.
+
+Walking and running :x
+The rig is capable of walking and running on different types of terrain smoothly. The spring spine dampens shocks and vibrations.
+
+Roomscale movement:x
+The rig can move around in its environement as the user moves around in real life. It will follow the users head position.
+
+Physical crouching and tiptoeing:x
+The rig's head height is mapped to the user's real head height. This ensures accurate vertical head movement.
+
+Virtual crouching and tiptoeing:x
+The rig's head height can be manually ajusted to virtually crouch and tiptoe.
+
+Jumping:x
+The rig is Capable of preloading and releasing a jump. It also takes into account players's hand inertia emulating a jump.
+
+Climbing:x
+The rig can move vertically with physically accurate climbing mechanics.
+
+Interacting with objects:x
+The rig can push or grab objects with one or both hands. Object properties such weight and size are reflected in the dynamics of these interactions.
+
+Configurable:
+The bodies properties such as user height, speed, weight and jump strength can be tweaked depending on the nature of its use.
