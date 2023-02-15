@@ -17,7 +17,7 @@ Jumping:x
 The rig is Capable of preloading and releasing a jump. It also takes into account players's hand inertia emulating a jump.
 
 Climbing:x
-The rig can move vertically with physically accurate climbing mechanics.
+The rig has vertical mobility with physically accurate climbing mechanics using hand holds.
 
 Interacting with objects:x
 The rig can push or grab objects with one or both hands. Object properties such weight and size are reflected in the dynamics of these interactions.
