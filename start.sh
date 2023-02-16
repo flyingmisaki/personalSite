@@ -1,1 +1,1 @@
-serve -s -p 6969 ./site
+serve -p 6969 ./site
