@@ -50,7 +50,7 @@ canvas {
 #gradient {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
 #header {
@@ -151,9 +151,14 @@ h3 {
     font: bold;
 }
 
+.bodyText {
+    color: rgb(200, 200, 200);
+}
+
+
 .card {
-    background-color: rgba(0, 0, 0, 0.75);
-    /* border-style: solid;
+    /* background-color: rgba(0, 0, 0, 0.75);
+    border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.25); */
     margin: 1vw;
@@ -231,8 +236,8 @@ h3 {
 }
 
 #footer {
-    background-color: rgba(0, 0, 0, 0.75);
-    /* border-style: solid;
+    /* background-color: rgba(0, 0, 0, 0.75);
+    border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.25); */
     display: flex;
