@@ -253,17 +253,12 @@ h3 {
     font-size: 3rem;
     padding: 1rem;
     margin: 0 0.2rem;
-    color: rgba(255, 255, 255, 0.75);
-    transition: color 0.35s;
-    background-color: rgba(0, 0, 0, 0);
+    color: rgba(200, 200, 200, 1);
 }
 
-/* .social:hover {
-    transition: background-color 0.35s;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: rgba(15, 15, 15, 1);
-    transition: color 0.35s;
-} */
+.social:hover {
+    color: rgba(255, 255, 255, 1);
+}
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
