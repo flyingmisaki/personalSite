@@ -38,7 +38,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(180, 180, 180, 1);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 1);
 }
 
 canvas {
@@ -152,9 +156,19 @@ h3 {
 }
 
 .bodyText {
-    color: rgb(200, 200, 200);
+    color: rgb(180, 180, 180);
 }
 
+.techText {
+    font-size: 0.9vw;
+    margin-left: 1vw;
+    margin-top: 0.2vw;
+}
+
+.tech {
+    font-size: 1.2vw;
+    margin-top: 0.2vw;
+}
 
 .card {
     /* background-color: rgba(0, 0, 0, 0.75);
@@ -171,6 +185,10 @@ h3 {
     margin-bottom: 3vw;
 }
 
+.card>div {
+    position: relative;
+}
+
 .title-hexrig {
     margin-top: 10rem;
     margin-bottom: 10rem;
@@ -178,7 +196,7 @@ h3 {
 }
 
 .card-hexrig {
-    background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: rgba(0, 0, 0, 0.75); */
     margin: 1vw;
     flex-grow: 1;
 
@@ -189,8 +207,12 @@ h3 {
     margin-bottom: 5vw;
 }
 
+.card-hexrig>div {
+    position: relative;
+}
+
 .card-hexrig-alt {
-    background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: rgba(0, 0, 0, 0.75); */
     margin: 1vw;
     flex-grow: 1;
 
@@ -223,8 +245,23 @@ h3 {
     object-fit: contain;
 }
 
-.linktext {
-    border: 1px;
+.linkText {
+    margin-top: 0.5vw;
+    background-color: rgb(245, 255, 255);
+    border: 2px solid rgb(245, 255, 255);
+    /* border-radius: 5px; */
+    color: rgba(0, 0, 0, 1);
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .6rem 1.2rem;
+}
+
+.linkText:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(245, 255, 255);
+    font-weight: bold;
 }
 
 #about {
@@ -245,19 +282,31 @@ h3 {
     justify-content: center;
     margin-right: 16vw;
     margin-left: 16vw;
-    margin-top: 25vh;
-    margin-bottom: 5vh;
+    margin-top: 20vh;
+    margin-bottom: 0.8vw;
 }
 
 .social {
     font-size: 3rem;
     padding: 1rem;
     margin: 0 0.2rem;
-    color: rgba(200, 200, 200, 1);
+    color: rgba(180, 180, 180, 1);
 }
 
 .social:hover {
     color: rgba(255, 255, 255, 1);
+}
+
+.backButton {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 1.5vw;
+}
+
+.contact {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 1vw;
 }
 
 a, a:hover, a:focus, a:active {
@@ -267,13 +316,13 @@ a, a:hover, a:focus, a:active {
 
 #signature {
     display: flex;
+    font-size: 1vw;
     justify-content: center;
-    padding-top: 2vh;
     padding-bottom: 2vh;
 }
 
 /* Smaller  screed widths here */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1180px) {
     #header {
         font-size: 5vw;
         padding-left: 15vw;

@@ -1,155 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="https://kit.fontawesome.com/9840d611ae.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
-    <!-- <script src="bgAnimation/bgAnimation.js"></script>
-    <script src="bgAnimation/Line.js"></script> -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <title>Pierrick Lyons</title>
-
-</head>
-
-<body>
-    
-    <canvas id="canvas"></canvas>
-    <script src="/bgAnimation/new/bg.js"></script>
-
-    <section id="splash">
+        <script src="https://kit.fontawesome.com/9840d611ae.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+        <!-- <script src="bgAnimation/bgAnimation.js"></script>
+        <script src="bgAnimation/Line.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         
-        <header id="header">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
             
-            <h1>Pierrick Lyons</h1>
-            
-            <div class="splashtext">
-                <p class="texts">Software Engineer</p>
-            </div>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <title>Pierrick Lyons</title>
+    </head>
 
-        </header>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script src="/bgAnimation/new/bg.js"></script>
 
-    </section>
-    
-    <section id="gradient">
-
-        <div id="buttondiv">
-            <a class="button" href="#cards">
-                <div class="arrow">
-                    <span></span>
+        <section id="splash">
+            <header id="header">
+                <h1>Pierrick Lyons</h1>
+                <div class="splashtext">
+                    <p class="texts">Software Engineer</p>
                 </div>
-            </a>
-        </div>
-    
-        <section id="cards">
-
-            <h2>About Me</h2>
-
-            <div class="card" id="about">
-                <img src="/image/me_square.jpg" id="mePic">
-                <div>
-                    <p>
-                        Hi! I'm Pierrick, a self-taught programmer with a focus on developing products across the web and 3D sectors. I have built up my interest to a professional level through various solo projects and more recently my successful internship at VRcompare.
-                    </p>
-                    <br>
-                    <h3>Education</h3>
-                    <li>Technological Baccalaureate: Computer Science and Engineering</li>
-                    <br>
-                    <h3>Skills</h3>
-                    <li>Web Design, Responsive Design, VR Development</li>
-                    <br>
-                    <h3>Experience</h3>
-                    <li>Full Stack Engineer Intern at VRcompare (React, TypeScript, MongoDB) - 2022</li>
-                </div>
-            </div>
-            
-            <h2>Projects</h2>
-
-            <div class="card">
-                <img src="/image/physicsrigpreview.gif">
-                <div>
-                    <h3>VR HexRig - 2022</h3>
-                    <p class="bodyText">
-                        Modular Unity asset that approximates real life movement and allows physics-based control of a virtual character using a “hexabody” collision model. Allows for a full range of motion in a roomscale environment, including climbing, running, jumping and interacting with virtual objects.
-                    </p>
-                    <i class="bodyText">Technologies used:  </i><a>Unity, C#, OpenXR</a>
-                    <br>
-                    <br>
-                    <a href="/physics-rig" class="linkText">> Check me out!</a>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="/image/pixeldemo.png">
-                <div>
-                    <h3>Pixel Art Editor - 2021</h3>
-                    <p class="bodyText">
-                        Dynamic frontend application that allows users to create, edit, and export pixel art from within the browser. Contains advanced functionality including layers, custom shape drawing tools and edit history that allows the user to undo mistakes.
-                    </p>
-                    <i class="bodyText">Technologies used:  </i><a>React, JavaScript, HTML, CSS, Canvas API</a>
-                    <br>
-                    <br>
-                    <a href="https://pierrick.me/pixel" class="linkText">> Live Demo</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/image/hmmmmm.png">
-                <div>
-                    <h3>Garden of hmmmm - Global Game Jam 2023</h3>
-                    <p class="bodyText">
-                        Top down adventure game where the player interacts with objects in the game by singing to them, facilitated through the use of microphone input and pitch detection. Created in 48 hours as part of a team fo 6 for the Global Game Jam 2023.
-                    </p>
-                    <i class="bodyText">Technologies used:  </i><a>Unity, C#</a>
-                    <br>
-                    <br>
-                    <a href="https://globalgamejam.org/2023/games/garden-hmmmm-9" class="linkText">> Jam Page</a>
-                </div>
-            </div>
-    
+            </header>
         </section>
+        
+        <section id="gradient">
+            <div id="buttondiv">
+                <a class="button" href="#cards">
+                    <div class="arrow">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        
+            <section id="cards">
+                <h2>About Me</h2>
+                <div class="card" id="about">
+                    <img src="/image/me_square.jpg" id="mePic">
+                    <div>
+                        <h3>Who I am</h3>
+                        <p class="bodyText">Hi! I'm Pierrick, a self-taught programmer with a focus on developing products across the web and 3D sectors. I have built up my interest to a professional level through various solo projects and more recently my successful internship at VRcompare.</p>
+                        <br>
+                        <h3>Education</h3>
+                        <li class="bodyText">Technological Baccalaureate: Computer Science and Engineering</li>
+                        <br>
+                        <h3>Skills</h3>
+                        <li class="bodyText">Web Design, Responsive Design, VR Development</li>
+                        <br>
+                        <h3>Experience</h3>
+                        <li class="bodyText">Full Stack Engineer Intern at VRcompare (React, TypeScript, MongoDB) - 2022</li>
+                    </div>
+                </div>
+                
+                <h2>Projects</h2>
+                <div class="card">
+                    <img src="/image/physicsrigpreview.gif">
+                    <div>
+                        <h3>VR HexRig - 2022</h3>
+                        <p class="bodyText">Modular Unity asset that approximates real life movement and allows physics-based control of a virtual character using a “hexabody” collision model. Allows for a full range of motion in a roomscale environment, including climbing, running, jumping and interacting with virtual objects.</p>
+                        <br>
+                        <i class="bodyText techText">Technologies used: </i><a class="tech">Unity, C#, OpenXR</a>
+                        <br>
+                        <a href="/physics-rig" class="linkText">> Check me out!</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/image/pixeldemo.png">
+                    <div>
+                        <h3>Pixel Art Editor - 2021</h3>
+                        <p class="bodyText">Dynamic frontend application that allows users to create, edit, and export pixel art from within the browser. Contains advanced functionality including layers, custom shape drawing tools and edit history that allows the user to undo mistakes.</p>
+                        <br>
+                        <i class="bodyText techText">Technologies used: </i><a class="tech">React, JavaScript, HTML, CSS, Canvas API</a>
+                        <br>
+                        <a href="https://pierrick.me/pixel" class="linkText" target="_blank">> Live Demo</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/image/hmmmmm.png">
+                    <div>
+                        <h3>Garden of hmmmm - Global Game Jam 2023</h3>
+                        <p class="bodyText">Top down adventure game where the player interacts with objects in the game by singing to them, facilitated through the use of microphone input and pitch detection. Created in 48 hours as part of a team fo 6 for the Global Game Jam 2023.</p>
+                        <br>
+                        <i class="bodyText techText">Technologies used: </i><a class="tech">Unity, C#</a>
+                        <br>
+                        <a href="https://globalgamejam.org/2023/games/garden-hmmmm-9" target="_blank"class="linkText">> Jam Page</a>
+                    </div>
+                </div>
+            </section>
 
-        <section id="footer">
+            <section id="footer">
+                <div id="empty"></div>
+                    <a href="mailto:contact@pierrick.me" target="_blank" class="social" id="email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/pierricklyons" target="_blank" class="social" id="github"><i class="fab fa-github"></i></a>
+                <div id="empty"></div>
+            </section>
             
-            <div id="empty"></div>
-            
-            <div class="social" id="email">
-                <a href="mailto:pierrick@live.co.uk" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
-    
-            <div class="social" id="github">
-                <a href="https://github.com/pierricklyons" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-    
-            <div id="empty"></div>
-    
+            <section>
+                <div id="signature">
+                    <p>contact@pierrick.me</p>
+                </div>
+            </section>
         </section>
-    
-        <!-- <section>
-            
-            <div id="signature">
-                <p>Under Construction - Pierrick Lyons - 2021</p>
-            </div>
-
-        </section> -->
-
-    </section>
-
-</body>
-
+    </body>
 </html>
