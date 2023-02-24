@@ -8,6 +8,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -185,6 +186,14 @@ h3 {
     margin-bottom: 3vw;
 }
 
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.03);
+}
+
 .card>div {
     position: relative;
 }
@@ -253,15 +262,32 @@ h3 {
     color: rgba(0, 0, 0, 1);
     font-weight: bold;
     position: absolute;
+    padding: .6rem 1.2rem;
     bottom: 0;
     right: 0;
-    padding: .6rem 1.2rem;
 }
 
 .linkText:hover {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(245, 255, 255);
+}
+
+.backButton {
+    background-color: rgb(245, 255, 255);
+    border: 2px solid rgb(245, 255, 255);
+    /* border-radius: 5px; */
+    color: rgba(0, 0, 0, 1);
     font-weight: bold;
+    padding: .6rem 1.2rem;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(245, 255, 255);
 }
 
 #about {
