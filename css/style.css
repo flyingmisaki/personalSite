@@ -84,7 +84,7 @@ canvas {
     padding-top: 7.5vh;
 }
 
-.button {
+/* .button {
     display: flex;
     justify-content: center;
     overflow: auto;
@@ -92,7 +92,7 @@ canvas {
     width: 15vw;
     height: 10vh;
     padding-bottom: 1vh;
-}
+} */
 
 .arrow {
     padding-top: 5vh;
@@ -242,14 +242,14 @@ h3 {
 
 .card-hexrig>img {
     margin-right: 2rem;
-    max-width: 25vw;
+    max-width: 30vw;
     max-height: auto;
     object-fit: contain;
 }
 
 .card-hexrig-alt>img {
     margin-left: 2rem;
-    max-width: 25vw;
+    max-width: 30vw;
     max-height: auto;
     object-fit: contain;
 }
@@ -347,12 +347,74 @@ a, a:hover, a:focus, a:active {
     padding-bottom: 2vh;
 }
 
-/* Smaller  screed widths here */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 800px) {
     #header {
-        font-size: 5vw;
-        padding-left: 15vw;
-        padding-right: 15vw;
+        font-size: 7.5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    #cards {
+        flex-direction: row;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .card>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card>img {
+        margin: 1vw;
+        max-width: 65vw;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    .techText {
+        font-size: 0.9rem;
+        margin-left: 0;
+        margin-top: 0.2vw;
+    }
+
+    .tech {
+        font-size: 1.2rem;
+        margin-top: 0.2vw;
+    }
+
+    .linkText {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card h3, p, a{
+        margin: 1vw;
+    }
+
+    .splashtext>p {
+        font-size: 7vw;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 90vh;
     }
 
     .arrow span {
@@ -362,39 +424,24 @@ a, a:hover, a:focus, a:active {
         border-right: 0.5vh solid white;
     }
 
-    #cards {
-        flex-direction: row;
+    .linkText {
+        margin-top: 0.5vw;
+        background-color: rgb(245, 255, 255);
+        border: 2px solid rgb(245, 255, 255);
+        /* border-radius: 5px; */
+        color: rgba(0, 0, 0, 1);
+        font-weight: bold;
+        /* position: absolute;
+        padding: .2rem .5rem;
+        bottom: 0;
+        right: 0; */
+        position: relative;
+        text-align: center;
+        font-size: 1rem;
     }
 
     #cardlet {
         width: 100vh;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    #header {
-        font-size: 7.5vw;
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-
-    .card>img {
-        margin: 1vw;
-        max-width: 50vw;
-    }
-
-    .card h3, p, a{
-        margin: 1vw;
-    }
-
-    #cardlet {
         margin-top: 2.5vw;
     }
 }
