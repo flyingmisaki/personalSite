@@ -163,7 +163,8 @@ h3 {
 
 .techText {
     font-size: 0.9vw;
-    margin-left: 1vw;
+    margin-left: 0.75rem;
+    margin-right: 0.25rem;
     margin-top: 0.2vw;
 }
 
