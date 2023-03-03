@@ -320,11 +320,10 @@ h3 {
     color: rgba(255, 255, 255, 1);
 }
 
-.backButton {
-    align-self: center;
-    text-align: center;
-    margin-bottom: 5vh;
-    font-size: 1.5vw;
+.backButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
 }
 
 .contact {
